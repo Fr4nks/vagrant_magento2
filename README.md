@@ -35,7 +35,7 @@ vagrant destroy
 # Manage
 Change this file
 ```
-git add
+git add .
 git commit
 git push
 ```
