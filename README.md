@@ -9,19 +9,16 @@ Vagrantfile & Vagrant.config.yml
    -theme
      
 Change directory to folder containing Vagrantfile & Vagrant.config.yml
-```   
-cd ~Documents/www/magento2.8 
 ```
-```
-Start   
-```
+cd ~Documents/www/magento2.8
 vagrant up
-```
-Log in
-```
 vagrant ssh
 ```
+
+
+
+
+
 ```
 vagrant destroy
 ```
-
