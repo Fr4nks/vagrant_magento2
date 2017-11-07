@@ -2,9 +2,9 @@
 Vagrantfile & Vagrant.config.yml
 
 - PHP 7.0
-- APACHE 2.4
-- MySQL DATABASE
-- MAGENTO 2
+- Apache 2.4
+- MySQL database
+- Magento 2
    -setup grunt
    -theme
      
@@ -15,7 +15,11 @@ vagrant up
 vagrant ssh
 ```
 
-
+Vagrantfile.config.yml contains the ip (current settings)
+Enter into your browser
+```
+http://192.168.10.10/magento2
+```
 
 
 
