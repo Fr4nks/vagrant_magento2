@@ -6,6 +6,11 @@ Vagrantfile & Vagrant.config.yml
 - MySQL database
 - Magento 2 -setup grunt -upload theme
 
+
+Clone Repository
+```
+git clone https://github.com/Fr4nks/vagrant_magento2.git .
+```
 Create a directory for magento2 files, synced_folder
 ```
 mkdir ~Documents/www/magento2.8-v
@@ -26,4 +31,11 @@ http://192.168.10.10/magento2
 To destroy the virtual machine 
 ```
 vagrant destroy
+```
+# Manage
+Change this file
+```
+git add
+git commit
+git push
 ```
