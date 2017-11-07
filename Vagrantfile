@@ -8,7 +8,7 @@ Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty64"
 
   config.vm.network "private_network", ip: vagrantConfig['ip']
-  config.vm.synced_folder '.', vagrantConfig['synced_folder']['guest_path'], 
+  config.vm.synced_folder "./", vagrantConfig['synced_folder']['guest_path'], 
     owner: nil, 
     group: nil,
     nfs: true,
