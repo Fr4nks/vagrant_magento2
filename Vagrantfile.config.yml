@@ -22,7 +22,7 @@ magento:
   admin_lastname: "Doe"
   admin_password: "admin123"
   admin_user: "admin"
-  admin_email: "fsdevilliers@gmail.com"
+  admin_email: "admin@gmail.com"
   backend_frontname: "admin"
   language: "en_US"
   currency: "USD"
