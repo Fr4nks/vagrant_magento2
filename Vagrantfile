@@ -81,19 +81,13 @@ Vagrant.configure(2) do |config|
     sudo php #{vagrantConfig['synced_folder']['guest_path']}bin/magento cache:flush
     sudo php #{vagrantConfig['synced_folder']['guest_path']}bin/magento setup:performance:generate-fixtures #{vagrantConfig['synced_folder']['guest_path']}setup/performance-toolkit/profiles/ce/small.xml
     
-
     echo INSTALL GIT
     sudo apt-get install -y git-all
     echo GIT CLONE MY THEME
     sudo git clone https://github.com/Fr4nks/EndTag #{vagrantConfig['synced_folder']['guest_path']}app/design/frontend/EndTag
 
-
-
     echo GIT CLONE GRUNT CONFIG theme.js FILE
-    sudo git clone https://github.com/Fr4nks/EndTag/README.md #{vagrantConfig['synced_folder']['guest_path']}dev/tools/grunt/temp/themes.js
-
-
-
+    sudo git clone https://github.com/Fr4nks/themes_js #{vagrantConfig['synced_folder']['guest_path']}dev/tools/grunt/temp
     mv #{vagrantConfig['synced_folder']['guest_path']}dev/tools/grunt/temp/themes.js #{vagrantConfig['synced_folder']['guest_path']}dev/tools/grunt/configs/themes.js
     rm -rf #{vagrantConfig['synced_folder']['guest_path']}dev/tools/grunt/temp
 
