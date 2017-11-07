@@ -35,6 +35,7 @@ vagrant destroy
 # Manage
 Change this file
 ```
+git pull
 git add .
 git commit -m "my heading"
 git push
