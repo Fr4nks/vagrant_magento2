@@ -7,7 +7,13 @@ Vagrantfile & Vagrant.config.yml
 - Magento 2
    -setup grunt
    -theme
-     
+
+
+
+Create a directory for magento2 files, synced_folder
+```
+mkdir ~Documents/www/magento2.8-v
+```     
 Change directory to folder containing Vagrantfile & Vagrant.config.yml
 ```
 cd ~Documents/www/magento2.8
