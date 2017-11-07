@@ -1,4 +1,4 @@
-# Vagrant Magento 2
+# Vagrant Magento 2 Development Environment
 Vagrantfile & Vagrant.config.yml
 
 - PHP 7.0
@@ -7,13 +7,21 @@ Vagrantfile & Vagrant.config.yml
 - MAGENTO 2
    -setup grunt
    -theme
+     
+Change directory to folder containing Vagrantfile & Vagrant.config.yml
+```   
+cd ~Documents/www/magento2.8 
+```
+```
+Start   
 ```
 vagrant up
 ```
-
-```
-vagrant destroy
-```
+Log in
 ```
 vagrant ssh
 ```
+```
+vagrant destroy
+```
+
