@@ -33,6 +33,7 @@ To destroy the virtual machine
 vagrant destroy
 ```
 # Manage
+Change this file
 ```
 git add
 git commit
