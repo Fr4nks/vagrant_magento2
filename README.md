@@ -1,4 +1,4 @@
-# vagrant_magento2
+# Vagrant Magento 2
 Vagrantfile & Vagrant.config.yml
 
 - PHP 7.0
@@ -7,13 +7,13 @@ Vagrantfile & Vagrant.config.yml
 - MAGENTO 2
    -setup grunt
    -theme
-,,,
+```
 vagrant up
-,,,
+```
 
-,,,
+```
 vagrant destroy
-,,,
-,,,
+```
+```
 vagrant ssh
-,,,
+```
