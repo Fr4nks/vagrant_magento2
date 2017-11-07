@@ -1,8 +1,8 @@
 ip: 192.168.10.10
 s3:   
-  access_key: "AKIAIPRNHSWEQNWHLCDQ"   
-  secret_key: "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"
-  bucket: "foggy-project-dhj6" 
+  access_key: "AKIAIWEQNWHLCDQ"   
+  secret_key: "5Z9Lj+kI8DjSv8q0bJ4QGLrNStnxAB2Zc"
+  bucket: "foggy-project" 
 synced_folder:   
   host_path: "/home/francois/Documents/www/magento2.11-v/"   
   guest_path: "/var/www/html/magento2/" 
