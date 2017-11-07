@@ -5,8 +5,8 @@ Vagrantfile & Vagrant.config.yml
 - Apache 2.4
 - MySQL database
 - Magento 2
-   -setup grunt
-   -theme
+--setup grunt
+--theme
 
 
 
