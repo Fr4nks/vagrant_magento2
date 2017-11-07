@@ -4,10 +4,7 @@ Vagrantfile & Vagrant.config.yml
 - PHP 7.0
 - Apache 2.4
 - MySQL database
-- Magento 2 
-  
-- setup grunt
-- upload theme
+- Magento 2 -setup grunt -upload theme
 
 Create a directory for magento2 files, synced_folder
 ```
