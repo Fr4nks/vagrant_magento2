@@ -28,7 +28,7 @@ http://192.168.10.10/magento2
 ```
 
 
-
+Destroy the virtual machine 
 ```
 vagrant destroy
 ```
