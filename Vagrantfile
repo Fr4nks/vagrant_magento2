@@ -105,25 +105,5 @@ Vagrant.configure(2) do |config|
     echo RENAME GRUNTFILE.JS.SAMPLE to GRUNTFILE.JS
     mv #{vagrantConfig['synced_folder']['guest_path']}Gruntfile.js.sample #{vagrantConfig['synced_folder']['guest_path']}Gruntfile.js
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 SHELL
 end
