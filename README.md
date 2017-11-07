@@ -6,6 +6,11 @@ Vagrantfile & Vagrant.config.yml
 - MySQL database
 - Magento 2 -setup grunt -upload theme
 
+
+```
+git clone 
+```
+
 Create a directory for magento2 files, synced_folder
 ```
 mkdir ~Documents/www/magento2.8-v
