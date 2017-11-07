@@ -7,10 +7,10 @@ Vagrantfile & Vagrant.config.yml
 - Magento 2 -setup grunt -upload theme
 
 
+Clone Repository
 ```
-git clone 
+git clone https://github.com/Fr4nks/vagrant_magento2.git .
 ```
-
 Create a directory for magento2 files, synced_folder
 ```
 mkdir ~Documents/www/magento2.8-v
