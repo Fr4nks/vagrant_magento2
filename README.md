@@ -6,8 +6,8 @@ Vagrantfile & Vagrant.config.yml
 - MySQL database
 - Magento 2 
   
-  setup grunt
-  theme
+- setup grunt
+- upload theme
 
 Create a directory for magento2 files, synced_folder
 ```
