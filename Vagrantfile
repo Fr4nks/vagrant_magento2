@@ -8,7 +8,7 @@ Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty64"
 
   config.vm.network "private_network", ip: vagrantConfig['ip']
-  config.vm.synced_folder vagrantConfig['synced_folder']['host_path'], vagrantConfig['synced_folder']['guest_path'], 
+  config.vm.synced_folder ./magento2, vagrantConfig['synced_folder']['guest_path'], 
     owner: nil, 
     group: nil,
     nfs: true,
@@ -97,8 +97,8 @@ Vagrant.configure(2) do |config|
 
     echo INSTALL GRUNT
     sudo apt-get update
-    sudo apt-get install nodejs
-    sudo apt-get install npm
+    sudo apt-get install -y nodejs
+    sudo apt-get install -y npm
     sudo ln -fs /usr/bin/nodejs /usr/local/bin/node
     
     sudo npm install -g grunt-cli
