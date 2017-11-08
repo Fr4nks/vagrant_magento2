@@ -33,7 +33,7 @@ Destroy the virtual machine
 ```
 vagrant destroy
 ```
-# Git Cheatsheet
+# Git commands
 How to change this file?
 ```
 git pull
