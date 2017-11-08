@@ -69,22 +69,21 @@ Vagrant.configure(2) do |config|
     sudo mysql --user=#{vagrantConfig['mysql']['username']} --password=#{vagrantConfig['mysql']['password']} -e \"CREATE DATABASE #{vagrantConfig['magento']['db_name']};\"
 
     echo INSTALL COMPOSER
-    curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+    curl -sS https://getcomposer.org/installer | php
     mv composer.phar /usr/local/bin/composer
     composer clearcache
+    echo '{\"http-basic\": {\"repo.magento.com\": {\"username\": \"#{vagrantConfig ['http_basic']['repo_magento_com']['username']}\",\"password\": \"#{vagrantConfig['http_basic']['repo_magento_com']['password']} \"}}, \"github-oauth\": {\"github.com\": \"#{vagrantConfig['github_oauth']['github_com']}\"}}' >> /root/.composer/auth.json" 
 
     echo INSTALL GIT
     sudo apt-get install -y git
 
-    echo DOWNLOAD MAGENTO
-    echo Delete folder
-    
+    echo CLEAN UP FOLDERS
     sudo rm -Rf /var/www/html
     sudo rm -rf #{vagrantConfig['synced_folder']['guest_path']}.* 2> /dev/null
     sudo ln -s #{vagrantConfig['synced_folder']['guest_path']} /var/www/html
-                                                            
-    echo '{"http-basic": {"repo.magento.com": {"username": "19c8a6aab812f5eeb401cc5841c035c9","password": "f227f194505629ba4a809df313a3f9ac"}}, "github-oauth": {"github.com": "0dd4939b11487a76d31620c5fb8c6b6f518bfd2d"}}' >> /root/.composer/auth.json
-    sudo git clone https://github.com/magento/magento2.git /var/www/html/
+    
+    echo DOWNLOAD MAGENTO
+    composer create-project -- repository-url=https://repo.magento.com/ magento/project- community-edition /var/www/html/
      
     echo INSTALL MAGENTO 
     sudo php #{vagrantConfig['synced_folder']['guest_path']}bin/magento setup:install --base-url="#{vagrantConfig['magento']['base_url']}" --db-host="#{vagrantConfig['mysql']['host']}" --db-user="#{vagrantConfig['mysql']['username']}" --db-password="#{vagrantConfig['mysql']['password']}" --db-name="#{vagrantConfig['magento']['db_name']}" --admin-firstname="#{vagrantConfig['magento']['admin_firstname']}" --admin-lastname="#{vagrantConfig['magento']['admin_lastname']}" --admin-email="#{vagrantConfig['magento']['admin_email']}" --admin-user="#{vagrantConfig['magento']['admin_user']}" --admin-password="#{vagrantConfig['magento']['admin_password']}" --backend-frontname="#{vagrantConfig['magento']['backend_frontname']}" --language="#{vagrantConfig['magento']['language']}" --currency="#{vagrantConfig['magento']['currency']}" --timezone="#{vagrantConfig['magento']['timezone']}"
