@@ -5,7 +5,7 @@ s3:
   bucket: "foggy-project-dhj6" 
 synced_folder:   
   host_path: "/home/francois/Documents/www/magento2.14-v/"   
-  guest_path: "/var/www/html/magento2/" 
+  guest_path: "/magento2/" 
 mysql:   
   host: "127.0.0.1"   
   username: root
