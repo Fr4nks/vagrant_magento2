@@ -72,7 +72,7 @@ Vagrant.configure(2) do |config|
     curl -sS https://getcomposer.org/installer | php
     mv composer.phar /usr/local/bin/composer
     composer clearcache
-    echo '{"http-basic": {"repo.magento.com": {"username": #{vagrantConfig ['http_basic']['repo_magento_com']['username']},"password": #{vagrantConfig['http_basic']['repo_magento_com']['password']} }}, "github-oauth": {"github.com": #{vagrantConfig['github_oauth']['github_com']} }}' >> /root/.composer/auth.json" 
+    echo '{"http-basic": {"repo.magento.com": {"username": #{vagrantConfig['http_basic']['repo_magento_com']['username']},"password": #{vagrantConfig['http_basic']['repo_magento_com']['password']} }}, "github-oauth": {"github.com": #{vagrantConfig['github_oauth']['github_com']} }}' >> /root/.composer/auth.json" 
 
     echo INSTALL GIT
     sudo apt-get install -y git
