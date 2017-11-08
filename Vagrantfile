@@ -99,7 +99,6 @@ Vagrant.configure(2) do |config|
     rm -rf #{vagrantConfig['synced_folder']['guest_path']}dev/tools/grunt/temp
 
     echo INSTALL GRUNT
-    sudo apt-get update
     sudo apt-get install -y nodejs
     sudo apt-get install -y npm
     sudo ln -fs /usr/bin/nodejs /usr/local/bin/node
