@@ -74,7 +74,7 @@ Vagrant.configure(2) do |config|
     composer clearcache
 
     echo INSTALL GIT
-    sudo apt-get install -y git-all
+    sudo apt-get install -y git
 
     echo DOWNLOAD MAGENTO
     echo Delete folder
