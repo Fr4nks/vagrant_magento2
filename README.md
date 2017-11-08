@@ -29,11 +29,11 @@ http://192.168.10.10/magento2
 ```
 
 # Manage
-To destroy the virtual machine 
+Destroy the virtual machine 
 ```
 vagrant destroy
 ```
-How to change this file
+How to change this file?
 ```
 git pull
 ```
