@@ -77,7 +77,9 @@ Vagrant.configure(2) do |config|
 
     echo DOWNLOAD MAGENTO
     echo Delete folder
+    
     sudo rm -Rf /var/www/html
+    sudo rm -rf #{vagrantConfig['synced_folder']['guest_path']}.* 2> /dev/null
     sudo ln -s #{vagrantConfig['synced_folder']['guest_path']} /var/www/html
     
     echo '{"http-basic": {"repo.magento.com": {"username": "19c8a6aab812f5eeb401cc5841c035c9","password": "f227f194505629ba4a809df313a3f9ac"}}, "github-oauth": {"github.com": "0dd4939b11487a76d31620c5fb8c6b6f518bfd2d"}}' >> /root/.composer/auth.json 
