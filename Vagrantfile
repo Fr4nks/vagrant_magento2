@@ -28,9 +28,6 @@ Vagrant.configure(2) do |config|
   
   #Install php 
   config.vm.provision "shell", inline: <<-SHELL
-
-    sudo apt-get -y update
-
     echo PHP INSTALL
     sudo add-apt-repository ppa:ondrej/php
     sudo apt-get -y update
