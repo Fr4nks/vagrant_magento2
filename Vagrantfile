@@ -52,6 +52,7 @@ Vagrant.configure(2) do |config|
     sudo grep -q "$find" ${file} && sudo sed -i "s~${find}~${replace}~" ${file} || echo "${replace}" >> ${file}
 
     echo APACHE2 PATCH
+    sudo apt-get install -y apache2
     sudo update-rc.d apache2 defaults
     sudo a2enmod rewrite
 
