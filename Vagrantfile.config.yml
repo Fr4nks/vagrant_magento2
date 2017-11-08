@@ -8,10 +8,10 @@ mysql:
   password: user123
 http_basic:   
   repo_magento_com:     
-    username: "????????????????"    
-    password: "????????????????"
+    username: ""    
+    password: ""
 github_oauth:   
-  github_com: "????????????????" 
+  github_com: "" 
 magento:   
   db_name: "magento"
   admin_firstname: "John"
@@ -26,5 +26,5 @@ magento:
   base_url: "http://192.168.10.10/magento2/"
   fixture: "small"
 github:
-  repository: "https://github.com/Fr4nks/Magento.git"
+  repository: ""
 
