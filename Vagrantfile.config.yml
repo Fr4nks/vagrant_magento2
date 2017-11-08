@@ -4,7 +4,7 @@ s3:
   secret_key: "5Z9Lj+kI8wpwDjSvwWU8q0btJ4QGLrNStnxAB2Zc"
   bucket: "foggy-project-dhj6" 
 synced_folder:   
-  host_path: "./magento2/"   
+  host_path: "./magento2/"
   guest_path: "/magento2/" 
 mysql:   
   host: "127.0.0.1"   
