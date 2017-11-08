@@ -71,10 +71,15 @@ Vagrant.configure(2) do |config|
     echo CREATE DATABASE
     sudo mysql --user=#{vagrantConfig['mysql']['username']} --password=#{vagrantConfig['mysql']['password']} -e \"CREATE DATABASE #{vagrantConfig['magento']['db_name']};\"
 
+    echo INSTALL COMPOSER
     curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
     mv composer.phar /usr/local/bin/composer
     composer clearcache
-    
+
+    echo INSTALL GIT
+    sudo apt-get install -y git-all
+    echo GIT CLONE MY THEME
+
     echo DOWNLOAD MAGENTO
     echo Delete folder
     sudo rm -rf #{vagrantConfig['synced_folder']['guest_path']}.* 2> /dev/null
@@ -88,9 +93,7 @@ Vagrant.configure(2) do |config|
     sudo php #{vagrantConfig['synced_folder']['guest_path']}bin/magento cache:flush
     sudo php #{vagrantConfig['synced_folder']['guest_path']}bin/magento setup:performance:generate-fixtures #{vagrantConfig['synced_folder']['guest_path']}setup/performance-toolkit/profiles/ce/small.xml
     
-    echo INSTALL GIT
-    sudo apt-get install -y git-all
-    echo GIT CLONE MY THEME
+    echo GIT CLONE THEME 
     sudo git clone https://github.com/Fr4nks/EndTag #{vagrantConfig['synced_folder']['guest_path']}app/design/frontend/EndTag
 
     echo GIT CLONE GRUNT CONFIG theme.js FILE
