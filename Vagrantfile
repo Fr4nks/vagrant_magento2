@@ -59,7 +59,6 @@ Vagrant.configure(2) do |config|
     sudo sed -i "s~<\/VirtualHost>~ <Directory "\/var\/www\/html\">\\n    AllowOverride All\\n  <\/Directory>\\n&~" ${file}
     sudo service apache2 restart
 
-    
     sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password #{vagrantConfig['mysql']['password']}'
     sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password #{vagrantConfig['mysql']['password']}'
     sudo apt-get -y install mysql-server-5.6
@@ -75,7 +74,6 @@ Vagrant.configure(2) do |config|
 
     echo INSTALL GIT
     sudo apt-get install -y git-all
-    echo GIT CLONE MY THEME
 
     echo DOWNLOAD MAGENTO
     echo Delete folder
@@ -90,7 +88,7 @@ Vagrant.configure(2) do |config|
     sudo php #{vagrantConfig['synced_folder']['guest_path']}bin/magento cache:flush
     sudo php #{vagrantConfig['synced_folder']['guest_path']}bin/magento setup:performance:generate-fixtures #{vagrantConfig['synced_folder']['guest_path']}setup/performance-toolkit/profiles/ce/small.xml
     
-    echo GIT CLONE THEME 
+    echo GIT CLONE MY THEME 
     sudo git clone https://github.com/Fr4nks/EndTag #{vagrantConfig['synced_folder']['guest_path']}app/design/frontend/EndTag
 
     echo GIT CLONE GRUNT CONFIG theme.js FILE
