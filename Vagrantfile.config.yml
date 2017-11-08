@@ -1,8 +1,4 @@
 ip: 192.168.10.10
-s3:   
-  access_key: "AKIAIPRNHSWEQNWHLCDQ"   
-  secret_key: "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"
-  bucket: "foggy-project-dhj6" 
 synced_folder:   
   host_path: "./magento2/"
   guest_path: "/magento2/" 
@@ -12,10 +8,10 @@ mysql:
   password: user123
 http_basic:   
   repo_magento_com:     
-    username: "19c8a6aab812f5eeb401cc5841c035c9"    
-    password: "f227f194505629ba4a809df313a3f9ac"
+    username: "????????????????"    
+    password: "????????????????"
 github_oauth:   
-  github_com: "2932db7451354af11eca2c69229758f084ea8f0c" 
+  github_com: "????????????????" 
 magento:   
   db_name: "magento"
   admin_firstname: "John"
