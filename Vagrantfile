@@ -76,8 +76,8 @@ Vagrant.configure(2) do |config|
     /usr/local/bin/composer config -g http-basic.
     /usr/local/bin/composer config -g http-basic
 
-    echo '{"github-oauth": {"github.com": "#{vagrantConfig['github_oauth']['github_com']}"}, "http-basic": {"repo.magento.com": {"username": "#{vagrantConfig['http_basic']['repo_magento_com']['username']}","password": "#{vagrantConfig['http_basic']['repo_magento_com']['password']}"}}}' >> /root/.composer/auth.json
-    
+    composer.phar global config http-basic.repo.magento.com #{vagrantConfig['http_basic']['repo_magento_com']['username']} #{vagrantConfig['http_basic']['repo_magento_com']['password']}
+    composer.phar global config github-oauth.github.com #{vagrantConfig['github_oauth']['github_com']}
     
 
 
