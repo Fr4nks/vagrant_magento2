@@ -6,22 +6,19 @@ Vagrantfile & Vagrant.config.yml
 - MySQL database
 - Magento 2 -setup grunt -upload theme
 
-
 Clone Repository
 ```
 git clone https://github.com/Fr4nks/vagrant_magento2.git .
 ```
-Create a directory for magento2 files, synced_folder
+Place the Vagrantfile.config.yml one folder up. Or change line 5 of Vagrant.config.yml
 ```
-mkdir ~Documents/www/magento2.8-v
-```     
-Change directory to folder containing Vagrantfile & Vagrant.config.yml
+vagrantConfig = YAML.load_file '../Vagrantfile.config.yml'
 ```
-cd ~Documents/www/magento2.8
+Start vagrant
+```
 vagrant up
 vagrant ssh
 ```
-
 Vagrantfile.config.yml contains the ip (current settings)
 Enter into your browser
 ```
