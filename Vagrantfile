@@ -73,8 +73,8 @@ Vagrant.configure(2) do |config|
     curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
     mv composer.phar /usr/local/bin/composer
     composer clearcache
-    composer.phar global config http-basic.repo.magento.com #{vagrantConfig['http_basic']['repo_magento_com']['username']} #{vagrantConfig['http_basic']['repo_magento_com']['password']}
-    composer.phar global config github-oauth.github.com #{vagrantConfig['github_oauth']['github_com']}
+    composer global config http-basic.repo.magento.com #{vagrantConfig['http_basic']['repo_magento_com']['username']} #{vagrantConfig['http_basic']['repo_magento_com']['password']}
+    composer global config github-oauth.github.com #{vagrantConfig['github_oauth']['github_com']}
     composer clearcache
     
 
