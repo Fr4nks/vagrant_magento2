@@ -1,6 +1,7 @@
 # Vagrant Magento 2 Development Environment
 Vagrantfile & Vagrant.config.yml
 
+- Ubuntu 16.4
 - PHP 7.0
 - Apache 2.4
 - MySQL database
