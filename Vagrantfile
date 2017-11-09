@@ -83,7 +83,7 @@ Vagrant.configure(2) do |config|
     sudo ln -s #{vagrantConfig['synced_folder']['guest_path']} /var/www/html
     
     echo DOWNLOAD MAGENTO
-    composer create-project -- repository-url=https://repo.magento.com/ magento/project-community-edition /var/www/html/
+    composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition /var/www/html/
      
     echo INSTALL MAGENTO 
     sudo php #{vagrantConfig['synced_folder']['guest_path']}bin/magento setup:install --base-url="#{vagrantConfig['magento']['base_url']}" --db-host="#{vagrantConfig['mysql']['host']}" --db-user="#{vagrantConfig['mysql']['username']}" --db-password="#{vagrantConfig['mysql']['password']}" --db-name="#{vagrantConfig['magento']['db_name']}" --admin-firstname="#{vagrantConfig['magento']['admin_firstname']}" --admin-lastname="#{vagrantConfig['magento']['admin_lastname']}" --admin-email="#{vagrantConfig['magento']['admin_email']}" --admin-user="#{vagrantConfig['magento']['admin_user']}" --admin-password="#{vagrantConfig['magento']['admin_password']}" --backend-frontname="#{vagrantConfig['magento']['backend_frontname']}" --language="#{vagrantConfig['magento']['language']}" --currency="#{vagrantConfig['magento']['currency']}" --timezone="#{vagrantConfig['magento']['timezone']}"
