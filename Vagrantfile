@@ -61,10 +61,11 @@ Vagrant.configure(2) do |config|
     sudo sed -i "s~<\/VirtualHost>~ <Directory "\/var\/www\/html\">\\n    AllowOverride All\\n  <\/Directory>\\n&~" ${file}
     sudo service apache2 restart
 
-    sudo apt-get -y install mysql-server
-    sudo update-rc.d mysql defaults
     sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password #{vagrantConfig['mysql']['password']}'
     sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password #{vagrantConfig['mysql']['password']}'
+    sudo apt-get -y install mysql-server-5.6
+    sudo service mysql start  
+    sudo update-rc.d mysql defaults
 
     echo CREATE DATABASE
     sudo mysql --user=#{vagrantConfig['mysql']['username']} --password=#{vagrantConfig['mysql']['password']} -e \"CREATE DATABASE #{vagrantConfig['magento']['db_name']};\"
