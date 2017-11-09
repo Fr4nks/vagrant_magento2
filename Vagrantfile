@@ -77,8 +77,6 @@ Vagrant.configure(2) do |config|
     composer global config github-oauth.github.com #{vagrantConfig['github_oauth']['github_com']}
     composer clearcache
     
-
-
     echo INSTALL GIT
     sudo apt-get install -y git
 
