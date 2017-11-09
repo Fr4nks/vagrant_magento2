@@ -70,7 +70,7 @@ Vagrant.configure(2) do |config|
     sudo mysql --user=#{vagrantConfig['mysql']['username']} --password=#{vagrantConfig['mysql']['password']} -e \"CREATE DATABASE #{vagrantConfig['magento']['db_name']};\"
 
     echo INSTALL COMPOSER
-    curl -sS https://getcomposer.org/installer | php
+    curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
     mv composer.phar /usr/local/bin/composer
     composer clearcache
     php composer.phar global config http-basic.repo.magento.com #{vagrantConfig['http_basic']['repo_magento_com']['username']} #{vagrantConfig['http_basic']['repo_magento_com']['password']}
