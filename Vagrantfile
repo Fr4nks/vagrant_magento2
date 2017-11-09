@@ -64,8 +64,8 @@ Vagrant.configure(2) do |config|
     sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password #{vagrantConfig['mysql']['password']}'
     sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password #{vagrantConfig['mysql']['password']}'
     sudo apt-get -y install mysql-server-5.6
-    sudo service mysql start  
     sudo update-rc.d mysql defaults
+    sudo service mysql restart 
 
     echo CREATE DATABASE
     sudo mysql --user=#{vagrantConfig['mysql']['username']} --password=#{vagrantConfig['mysql']['password']} -e \"CREATE DATABASE #{vagrantConfig['magento']['db_name']};\"
